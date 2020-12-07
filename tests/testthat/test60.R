@@ -1,3 +1,6 @@
+library(testthat)
+library(BUGSnet)
+
 # Reproduce and Test Fix #60
 
 context("Meta Regression Continuous Only")
