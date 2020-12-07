@@ -4,7 +4,6 @@
 <!-- badges: start -->
 
 ![R-CMD-check](https://github.com/audrey-b/BUGSnet/workflows/R-CMD-check/badge.svg)
-
 ![test-coverage](https://github.com/Harmohit-Singh/BUGSnet/workflows/test-coverage/badge.svg)
 
 <!-- badges: end -->

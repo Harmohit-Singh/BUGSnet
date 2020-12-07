@@ -11,8 +11,6 @@ my_afib <- afib
 
 my_afib$stroke <- "Decimal"
 
-View(my_afib)
-
 dataprep <- data.prep(arm.data = my_afib,
                       varname.t = "treatment",
                       varname.s = "study")
