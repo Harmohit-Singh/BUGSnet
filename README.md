@@ -4,7 +4,7 @@
 <!-- badges: start -->
 
 ![R-CMD-check](https://github.com/audrey-b/BUGSnet/workflows/R-CMD-check/badge.svg)
-![test-coverage](https://github.com/Harmohit-Singh/BUGSnet/workflows/test-coverage/badge.svg)
+[![codecov](https://codecov.io/gh/Harmohit-Singh/BUGSnet/branch/master/graph/badge.svg?token=XIG548JRBM)](https://codecov.io/gh/Harmohit-Singh/BUGSnet)
 
 <!-- badges: end -->
 
