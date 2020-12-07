@@ -1,13 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# BUGSnet
-
 <!-- badges: start -->
 
 ![R-CMD-check](https://github.com/audrey-b/BUGSnet/workflows/R-CMD-check/badge.svg)
 
+![test-coverage](https://github.com/Harmohit-Singh/BUGSnet/workflows/test-coverage/badge.svg)
+
 <!-- badges: end -->
+
+# BUGSnet
 
 BUGSnet (Bayesian inference Using Gibbs Sampling to conduct NETwork
 meta-analysis) is a feature-rich R package to conduct Bayesian network
@@ -61,8 +63,8 @@ BUGSnet is available under the Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License (CC
 BY-NC-SA 4.0). Kindly review the LICENSE file. You are responsible for
 conforming to the terms of this license. BUGSnet is provided as-is and
-comes with absolutely no warranty. Commercial use is prohibited; please
-contact the authors for more information.
+comes with absolutely no warranties. Commercial use is prohibited;
+please contact the authors for more information.
 
 ## How to cite BUGSnet?
 
