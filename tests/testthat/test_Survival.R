@@ -74,6 +74,26 @@ test_that("Build NMA Model",
             expect_equal(random_effects_model, result)
           })
 
+# Build NMA Model Regression
+
+random_effects_model_reg <- nma.model(data=rate2.slr,
+                                      outcome="diabetes",
+                                      N="n",
+                                      sd = "age_SD",
+                                      reference="Placebo",
+                                      family="normal",
+                                      link="identity",
+                                      effects= "random",
+                                      covariate = "age",
+                                      prior.beta="EXCHANGEABLE")
+
+result <- readRDS("test_Survival_results/random_effects_model_reg.rds")
+
+test_that("Build NMA Model Regression",
+          {
+            expect_equal(random_effects_model_reg, result)
+          })
+
 # Run NMA
 
 set.seed(20190828)
@@ -87,6 +107,21 @@ result <- readRDS("test_Survival_results/random_effects_results.rds")
 test_that("Run NMA",
           {
             expect_equal(random_effects_results, result)
+          })
+
+# Run NMA Regression
+
+set.seed(20190828)
+random_effects_results_reg <- nma.run(random_effects_model_reg,
+                                      n.adapt=1000,
+                                      n.burnin=1000,
+                                      n.iter=10000)
+
+result <- readRDS("test_Survival_results/random_effects_results_reg.rds")
+
+test_that("Run NMA Regression",
+          {
+            expect_equal(random_effects_results_reg, result)
           })
 
 # Plot Model Fit
@@ -204,5 +239,14 @@ test_that("NMA Diagnostics",
           {
             expect_doppelganger( title = "NMA Diagnostics",
                                  nma.diag(random_effects_results, plot_prompt = FALSE)       
+            )
+          })
+
+# Regression Plot
+
+test_that("Regression Plot",
+          {
+            expect_doppelganger( title = "Regression Plot",
+                                nma.regplot(random_effects_results_reg)           
             )
           })
