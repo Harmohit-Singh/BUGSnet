@@ -289,3 +289,31 @@ test_that("Data Plot",
                                            text.size = 12) 
             )
           })
+
+# Network Characteristics Continuous
+
+network.char.cont <- net.tab(data = rate2.slr,
+                        outcome = "diabetes",
+                        N = "n",
+                        type.outcome = "continuous")
+
+result <- readRDS("test_Survival_results/network.char.cont.rds")
+
+test_that("Network Characteristics Continuous",
+          {
+            expect_equal(network.char.cont, result)
+          })
+
+# Network Characteristics Binomial
+
+network.char.binom <- net.tab(data = rate2.slr,
+                             outcome = "diabetes",
+                             N = "n",
+                             type.outcome = "binomial")
+
+result <- readRDS("test_Survival_results/network.char.binom.rds")
+
+test_that("Network Characteristics Binomial",
+          {
+            expect_equal(network.char.binom, result)
+          })
