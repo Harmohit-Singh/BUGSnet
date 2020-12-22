@@ -36,5 +36,6 @@
 #' @importFrom stringr str_detect
 #' @importFrom grDevices colorRampPalette dev.off
 #' @importFrom RColorBrewer brewer.pal brewer.pal.info
+#' @import vdiffr
 
 if(getRversion() >= "2.15.1")  utils::globalVariables(c(".", ":="))
