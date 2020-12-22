@@ -250,3 +250,42 @@ test_that("Regression Plot",
                                 nma.regplot(random_effects_results_reg)           
             )
           })
+
+# Plot Network in Different Ways
+
+test_that("Plot Network of Evidence 2",
+          {
+            expect_doppelganger( title = "Network of Evidence 2",
+                                 net.plot(rate2.slr, node.scale = 3, 
+                                          edge.scale=1.5,
+                                          study.counts = TRUE,
+                                          graph.scale = FALSE
+                                          ))
+          })
+
+# Forest Plot Regression
+
+test_that("Forest Plot Regression",
+          {
+            expect_doppelganger( title = "Forest Plot Regression",
+                                 nma.forest(random_effects_results_reg,
+                                            central.tdcy="mean",
+                                            comparator = "Placebo",
+                                            log.scale = FALSE,
+                                            x.trans = "log",
+                                            cov.value = 20)        
+            )
+          })
+
+# Data Plot 
+
+test_that("Data Plot",
+          {
+            expect_doppelganger( title = "Data Plot",
+                                 data.plot(data = rate2.slr,
+                                           covariate = "age", 
+                                           avg.hline= FALSE, #add overall average line?
+                                           fill.str = "trtnum",
+                                           text.size = 12) 
+            )
+          })
