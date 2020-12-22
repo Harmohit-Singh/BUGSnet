@@ -197,3 +197,12 @@ test_that("Forest Plot",
                                             log.scale = FALSE)        
             )
           })
+
+# NMA Diagnostics
+
+test_that("NMA Diagnostics",
+          {
+            expect_doppelganger( title = "NMA Diagnostics",
+                                 nma.diag(random_effects_results, plot_prompt = FALSE)       
+            )
+          })
